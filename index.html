@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#79d9bb">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+    <title>Comprobante de pago</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Formulario de prueba -->
+    <main id="formView" class="view form-view">
+        <section class="form-card">
+            <h1>Generar comprobante</h1>
+            <p class="subtitle">Ingresa los datos del pago</p>
+
+            <form id="paymentForm">
+                <div class="field">
+                    <label for="merchant">Comercio</label>
+                    <input type="text" id="merchant" name="merchant"
+                           placeholder="Ej: Don Mario" required maxlength="80">
+                </div>
+
+                <div class="field">
+                    <label for="amount">Precio</label>
+                    <input type="number" id="amount" name="amount"
+                           placeholder="Ej: 6970" min="1" step="1" required>
+                </div>
+
+                <button type="submit" class="primary-button">Generar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Vista final -->
+    <main id="resultView" class="view result-view hidden">
+
+        <section class="success-header">
+            <div class="icon-circle">
+                <!-- Ícono de pulgar, dibujado en SVG para no depender de imágenes externas -->
+                <svg class="success-icon" viewBox="0 0 100 100" aria-hidden="true">
+                    <path d="M31 39H20C17.8 39 16 40.8 16 43V69C16 71.2 17.8 73 20 73H31V39Z"
+                          fill="none" stroke="currentColor" stroke-width="4"
+                          stroke-linejoin="round"/>
+                    <path d="M31 43H38L45 31V25C45 21.7 47.7 19 51 19
+                             C54.3 19 57 21.7 57 25V32H68
+                             C73.2 32 77 36.8 75.7 41.8L71.5 61.8
+                             C70.6 66 66.9 69 62.6 69H31"
+                          fill="none" stroke="currentColor" stroke-width="4"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </section>
+
+        <section class="result-content">
+            <h1>
+                Listo! Realizaste un pago de <strong id="resultAmount">$0</strong>
+                <span>al comercio <strong id="resultMerchant">---</strong></span>
+            </h1>
+
+            <div class="result-actions">
+                <button id="receiptButton" class="receipt-button">
+                    Ver Comprobante
+                </button>
+
+                <button id="exitButton" class="exit-button">
+                    Salir
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("sw.js");
+            });
+        }
+    </script>
+</body>
+</html>
