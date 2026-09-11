@@ -1,6 +1,6 @@
 const CACHE_NAME = "comprobante-pago-v1";
 
-const FILES_TO_CACHE = [
+const ARCHIVOS = [
     "./",
     "./index.html",
     "./style.css",
@@ -10,30 +10,19 @@ const FILES_TO_CACHE = [
     "./icons/icon-512.png"
 ];
 
-self.addEventListener("install", event => {
+self.addEventListener("install", function (event) {
     event.waitUntil(
-        caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE))
+        caches.open(CACHE_NAME).then(function (cache) {
+            return cache.addAll(ARCHIVOS);
+        })
     );
-    self.skipWaiting();
 });
 
-self.addEventListener("activate", event => {
-    event.waitUntil(
-        caches.keys().then(keys =>
-            Promise.all(
-                keys
-                    .filter(key => key !== CACHE_NAME)
-                    .map(key => caches.delete(key))
-            )
-        )
-    );
-    self.clients.claim();
-});
 
-self.addEventListener("fetch", event => {
+self.addEventListener("fetch", function (event) {
     event.respondWith(
-        caches.match(event.request).then(cached => {
-            return cached || fetch(event.request);
+        caches.match(event.request).then(function (respuesta) {
+            return respuesta || fetch(event.request);
         })
     );
 });
