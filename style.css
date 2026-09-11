@@ -12,9 +12,9 @@ body {
     padding: 0;
     width: 100%;
     min-height: 100%;
-
+    
     font-family: Arial, Helvetica, sans-serif;
-
+    
     background: #ffffff;
     color: #363944;
 }
@@ -52,7 +52,6 @@ button {
     display: none !important;
 }
 
-
 /* ================================
    PANTALLA DEL FORMULARIO
 ================================ */
@@ -61,22 +60,18 @@ button {
     width: 100%;
     min-height: 100vh;
     padding: 25px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: #f5f6f7;
 }
 
 .form-card {
     width: 100%;
     padding: 30px 25px;
-
     background: #ffffff;
     border-radius: 20px;
 }
-
 
 /* ================================
    TÍTULO DEL FORMULARIO
@@ -84,13 +79,10 @@ button {
 
 .form-card h1 {
     margin: 0;
-
     font-size: 26px;
     font-weight: 700;
     line-height: 1.2;
-
     text-align: center;
-
     color: #363944;
 }
 
@@ -101,16 +93,12 @@ button {
 
 .subtitle {
     margin: 10px 0 30px 0;
-
     font-size: 16px;
     font-weight: 400;
     line-height: 1.4;
-
     text-align: center;
-
     color: #777b86;
 }
-
 
 /* ================================
    CAMPOS DEL FORMULARIO
@@ -121,7 +109,6 @@ button {
     margin-bottom: 20px;
 }
 
-
 /* ================================
    ETIQUETA DE LOS CAMPOS
 ================================ */
@@ -129,13 +116,10 @@ button {
 .field label {
     display: block;
     margin-bottom: 8px;
-
     font-size: 15px;
     font-weight: 600;
-
     color: #363944;
 }
-
 
 /* ================================
    CAJAS DE ENTRADA
@@ -145,18 +129,16 @@ button {
     width: 100%;
     height: 48px;
     padding: 0 14px;
-
+    
     font-size: 16px;
-
     color: #363944;
-
+    
     background: #ffffff;
     border: 1px solid #d8dbe0;
     border-radius: 10px;
-
+    
     outline: none;
 }
-
 
 /* ================================
    BOTÓN GENERAR
@@ -166,16 +148,15 @@ button {
     width: 100%;
     height: 48px;
     margin-top: 10px;
-
+    
     font-size: 16px;
     font-weight: 600;
-
+    
     color: #ffffff;
     background: #363944;
-
+    
     border-radius: 10px;
 }
-
 
 /* ================================
    PANTALLA DE RESULTADO
@@ -184,13 +165,10 @@ button {
 .result-view {
     width: 100%;
     min-height: 100vh;
-
+    background: #ffffff;
     display: flex;
     flex-direction: column;
-
-    background: #ffffff;
 }
-
 
 /* ================================
    ENCABEZADO DE ÉXITO
@@ -206,11 +184,10 @@ button {
     align-items: flex-start;
 
     background: #83E1BE;
-
+    
     border-bottom-left-radius: 30% 15px;
     border-bottom-right-radius: 30% 15px;
 }
-
 
 /* ================================
    CÍRCULO DEL ÍCONO
@@ -221,17 +198,15 @@ button {
     height: 70px;
 
     margin-top: 25px;
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     border-radius: 50%;
-
     background: #fdfdfd;
     color: #6edcb8;
 }
-
 
 /* ================================
    ÍCONO DE ÉXITO
@@ -242,7 +217,6 @@ button {
     height: 55px;
 }
 
-
 /* ================================
    CONTENIDO DEL RESULTADO
 ================================ */
@@ -250,14 +224,12 @@ button {
 .result-content {
     width: 100%;
     flex: 1;
-    padding: 30px 0px;
+    padding: 30px 10px;
 
     display: flex;
     flex-direction: column;
-
     text-align: center;
 }
-
 
 /* ================================
    TEXTO PRINCIPAL DEL RESULTADO
@@ -265,19 +237,17 @@ button {
 
 .result-content h1 {
     margin: 0;
-
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 600;
     line-height: 1.4;
-    letter-spacing: 0.8px;
-
+    letter-spacing: 0.5px;
     color: #363944;
 }
 
 .result-content h1 span {
     display: block;
+    white-space: nowrap;
 }
-
 
 /* ================================
    ACCIONES DEL RESULTADO
@@ -292,7 +262,6 @@ button {
     gap: 12px;
 }
 
-
 /* ================================
    BOTÓN VER COMPROBANTE
 ================================ */
@@ -300,17 +269,16 @@ button {
 .receipt-button {
     width: 100%;
     height: 48px;
-
+    
     font-size: 15px;
     font-weight: 600;
-
+    
     color: #3F4EAA;
     background: #ffffff;
-
+    
     border: 1px solid #ffffff;
     border-radius: 10px;
 }
-
 
 /* ================================
    BOTÓN SALIR
@@ -320,12 +288,12 @@ button {
     width: 90%;
     height: 30px;
     margin: 0 auto;
-
+    
     font-size: 15px;
     font-weight: 600;
-
+    
     color: #ffffff;
     background: #FF9000;
-
+    
     border-radius: 80px;
 }
