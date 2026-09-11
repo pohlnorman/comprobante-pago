@@ -1,5 +1,5 @@
 /* ================================
-   GENERAL
+   CONFIGURACIÓN GENERAL
 ================================ */
 
 * {
@@ -11,10 +11,16 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    
     font-family: Arial, Helvetica, sans-serif;
+    
     background: #ffffff;
     color: #363944;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 button,
@@ -27,13 +33,27 @@ button {
     cursor: pointer;
 }
 
-.hidden {
-    display: none !important;
+
+/* ================================
+   VISTAS
+================================ */
+
+.view {
+    width: 100%;
+    min-height: 100vh;
 }
 
 
 /* ================================
-   FORMULARIO
+   OCULTAR ELEMENTOS
+================================ */
+
+.hidden {
+    display: none !important;
+}
+
+/* ================================
+   PANTALLA DEL FORMULARIO
 ================================ */
 
 .form-view {
@@ -53,49 +73,103 @@ button {
     border-radius: 20px;
 }
 
+/* ================================
+   TÍTULO DEL FORMULARIO
+================================ */
+
 .form-card h1 {
-    margin: 0 0 10px;
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
     text-align: center;
-    font-size: 27px;
+    color: #363944;
 }
+
+/* ================================
+   TÍTULO DEL FORMULARIO
+================================ */
+
+.form-card h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    color: #363944;
+}
+
+
+/* ================================
+   SUBTÍTULO
+================================ */
 
 .subtitle {
-    margin: 0 0 28px;
+    margin: 10px 0 30px 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
     text-align: center;
-    color: #737780;
+    color: #777b86;
 }
 
+/* ================================
+   CAMPOS DEL FORMULARIO
+================================ */
+
 .field {
+    width: 100%;
     margin-bottom: 20px;
 }
+
+/* ================================
+   ETIQUETA DE LOS CAMPOS
+================================ */
 
 .field label {
     display: block;
     margin-bottom: 8px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 600;
+    color: #363944;
 }
+
+/* ================================
+   CAJAS DE ENTRADA
+================================ */
 
 .field input {
     width: 100%;
-    height: 52px;
-    padding: 0 15px;
-    border: 1px solid #d7d9de;
+    height: 48px;
+    padding: 0 14px;
+    
+    font-size: 16px;
+    color: #363944;
+    
+    background: #ffffff;
+    border: 1px solid #d8dbe0;
     border-radius: 10px;
-    font-size: 17px;
+    
     outline: none;
 }
 
+/* ================================
+   BOTÓN GENERAR
+================================ */
+
 .primary-button {
     width: 100%;
-    height: 54px;
+    height: 48px;
     margin-top: 10px;
-    border-radius: 28px;
-    background: #ff9700;
+    
+    font-size: 16px;
+    font-weight: 600;
+    
     color: #ffffff;
-    font-size: 18px;
-    font-weight: bold;
+    background: #363944;
+    
+    border-radius: 10px;
 }
-
 
 /* ================================
    PANTALLA DE RESULTADO
@@ -105,93 +179,86 @@ button {
     width: 100%;
     min-height: 100vh;
     background: #ffffff;
-    overflow: hidden;
-}
-
-
-/* Fondo verde */
-
-.success-header {
-    position: relative;
-    width: 100%;
-    height: 335px;
-    background: #79d9bb;
-    border-radius: 0 0 50% 50% / 0 0 12% 12%;
-}
-
-
-/* Círculo blanco */
-
-.icon-circle {
-    position: absolute;
-    left: 50%;
-    bottom: -100px;
-
-    width: 200px;
-    height: 200px;
-
-    transform: translateX(-50%);
-
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #ffffff;
-    border-radius: 50%;
-
-    /* Sin borde ni sombra */
-    border: none;
-    box-shadow: none;
+    flex-direction: column;
 }
-
-
-/* Icono */
-
-.success-icon {
-    width: 105px;
-    height: 105px;
-    color: #12b98b;
-}
-
 
 /* ================================
-   TEXTO
+   ENCABEZADO DE ÉXITO
+================================ */
+
+.success-header {
+    width: 100%;
+    height: 100px;
+    padding-top: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background: #83E1BE;
+    
+    border-bottom-left-radius: 30% 15px;
+    border-bottom-right-radius: 30% 15px;
+}
+
+/* ================================
+   CÍRCULO DEL ÍCONO
+================================ */
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+
+    margin-top: 25px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 50%;
+    background: #fdfdfd;
+    color: #6edcb8;
+}
+
+/* ================================
+   ÍCONO DE ÉXITO
+================================ */
+
+.success-icon {
+    width: 55px;
+    height: 55px;
+}
+
+/* ================================
+   CONTENIDO DEL RESULTADO
 ================================ */
 
 .result-content {
     width: 100%;
-    min-height: calc(100vh - 335px);
-    padding: 125px 70px 35px;
+    flex: 1;
+    padding: 30px 10px;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
 }
 
+/* ================================
+   TEXTO PRINCIPAL DEL RESULTADO
+================================ */
+
 .result-content h1 {
-    width: 100%;
     margin: 0;
-
-    text-align: center;
-
-    font-size: 30px;
-    line-height: 1.45;
-    font-weight: bold;
-
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.8px;
     color: #363944;
 }
 
-.result-content h1 strong {
-    font-weight: bold;
-}
-
-.result-content h1 span {
-    display: block;
-}
-
-
 /* ================================
-   BOTONES
+   ACCIONES DEL RESULTADO
 ================================ */
 
 .result-actions {
@@ -200,37 +267,40 @@ button {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 12px;
 }
 
-
-/* Ver comprobante */
+/* ================================
+   BOTÓN VER COMPROBANTE
+================================ */
 
 .receipt-button {
-    padding: 8px 15px;
-
-    background: transparent;
-
-    color: #435baa;
-
-    font-size: 27px;
-    font-weight: bold;
+    width: 100%;
+    height: 48px;
+    
+    font-size: 12px;
+    font-weight: 600;
+    
+    color: #3F4EAA;
+    background: #ffffff;
+    
+    border: 1px solid #ffffff;
+    border-radius: 10px;
 }
 
-
-/* Salir */
+/* ================================
+   BOTÓN SALIR
+================================ */
 
 .exit-button {
     width: 100%;
-    height: 92px;
-
-    margin-top: 40px;
-
-    border-radius: 50px;
-
-    background: #ff9700;
+    height: 28px;
+    
+    font-size: 12px;
+    font-weight: 600;
+    
     color: #ffffff;
-
-    font-size: 30px;
-    font-weight: bold;
+    background: #FF9000;
+    
+    border-radius: 80px;
 }
