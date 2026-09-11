@@ -237,7 +237,7 @@ button {
 .result-content {
     width: 100%;
     flex: 1;
-    padding: 30px 12px;
+    padding: 30px 11px;
 
     display: flex;
     flex-direction: column;
