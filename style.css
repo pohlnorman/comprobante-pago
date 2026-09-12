@@ -244,9 +244,20 @@ button {
     color: #363944;
 }
 
-.result-content h1 span {
+.payment-message {
     display: block;
-    white-space: nowrap;
+}
+
+.merchant-message {
+    display: block;
+}
+
+#resultAmount {
+    display: inline;
+}
+
+#resultMerchant {
+    display: inline;
 }
 
 /* ================================
