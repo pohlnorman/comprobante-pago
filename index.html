@@ -78,12 +78,12 @@
             <h1>
                 <span class="payment-message">
                     Listo! Realizaste un pago de 
-                    <span id="resultAmount">$0</span>
+                    <span  id="resultAmount">$0</span >
                 </span>
 
                 <span class="merchant-message">
                     al comercio 
-                    <span id="resultMerchant">---</span>
+                    <span  id="resultMerchant">---</span >
                 </span>
             </h1>
 
@@ -99,6 +99,82 @@
         </section>
 
     </main>
+
+    <!-- Pantalla del comprobante -->
+<main id="receiptView" class="view receipt-view hidden">
+
+    <section class="receipt-content">
+
+        <div class="receipt-top">
+            <button id="backReceiptButton" class="back-receipt-button">
+                ←
+            </button>
+
+            <div class="receipt-success-icon">
+                ✓
+            </div>
+
+            <h1>Transacción exitosa</h1>
+        </div>
+
+
+        <div class="receipt-data">
+
+            <div class="receipt-row">
+                <span class="receipt-label">Monto</span>
+                <span id="receiptAmount" class="receipt-value">$0</span>
+            </div>
+
+            <div class="receipt-row">
+                <span class="receipt-label">Nombre</span>
+                <span id="receiptMerchant" class="receipt-value">---</span>
+            </div>
+
+            <div class="receipt-row">
+                <span class="receipt-label">Rut</span>
+                <span id="receiptRut" class="receipt-value">15.211.848-1</span>
+            </div>
+
+            <div class="receipt-row">
+                <span class="receipt-label">Asunto</span>
+                <span id="receiptSubject" class="receipt-value"></span>
+            </div>
+
+            <hr>
+
+            <div class="receipt-row">
+                <span class="receipt-label">Fecha</span>
+                <span id="receiptDate" class="receipt-value">--/--/----</span>
+            </div>
+
+            <div class="receipt-row">
+                <span class="receipt-label">Hora</span>
+                <span id="receiptTime" class="receipt-value">--:--:--</span>
+            </div>
+
+            <div class="receipt-row">
+                <span class="receipt-label">N° de operación</span>
+                <span id="receiptOperation" class="receipt-value">--------</span>
+            </div>
+
+        </div>
+
+
+        <div class="receipt-bottom">
+
+            <button class="share-receipt-button">
+                ♧ Compartir comprobante
+            </button>
+
+            <button class="close-receipt-button">
+                Cerrar
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
 
     <script src="app.js"></script>
 </body>
