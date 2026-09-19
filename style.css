@@ -325,9 +325,14 @@ button {
 ================================ */
 
 .receipt-content {
+    position: relative;
+
     width: 100%;
     min-height: 100vh;
     padding: 20px 33px;
+
+    display: flex;
+    flex-direction: column;
 
     background: #ffffff;
 }
@@ -414,11 +419,26 @@ button {
 
 .receipt-row {
     width: 100%;
-    min-height: 32px;
+    min-height: 36px;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+}
+
+/* ================================
+   POSICIÓN DE LOS VALORES
+================================ */
+
+.receipt-value {
+    margin-left: 35px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #363944;
+
+    text-align: left;
 }
 
 /* ================================
@@ -426,6 +446,7 @@ button {
 ================================ */
 
 .receipt-label {
+    width: 85px;
     font-size: 15px;
     font-weight: 400;
 
@@ -439,6 +460,7 @@ button {
 ================================ */
 
 .receipt-value {
+    margin-left: 0;
     font-size: 15px;
     font-weight: 600;
 
@@ -466,13 +488,16 @@ button {
 .receipt-bottom {
     position: relative;
 
+    left: 0px;
+    bottom: 0;
+
     width: calc(100% + 66px);
     height: 180px;
 
-    margin-top: 40px;
+    margin-top: 25px;
     margin-left: -33px;
 
-    padding: 35px 33px 0px 33px;
+    padding: 35px 0 20px 0;
 
     display: flex;
     flex-direction: column;
@@ -498,6 +523,7 @@ button {
     height: 10px;
 
     background: #f5f6f7;
+
 
     clip-path: polygon(
         0% 100%,
@@ -526,10 +552,12 @@ button {
     font-weight: 600;
 
     color: #3F4EAA;
-    background: #ffffff;
+    background: #f5f6f7;
 
-    border: 1px solid #3F4EAA;
+    border: 1px solid #f5f6f7;
     border-radius: 10px;
+    
+    
 }
 
 /* ================================
