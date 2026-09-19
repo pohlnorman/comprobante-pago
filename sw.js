@@ -1,4 +1,4 @@
-const CACHE_NAME = "comprobante-pago-v1";
+const CACHE_NAME = "comprobante-pago-v2";
 
 const ARCHIVOS = [
     "./",
