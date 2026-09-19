@@ -351,19 +351,22 @@ button {
 ================================ */
 
 .back-receipt-button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     width: 40px;
     height: 40px;
     padding: 0;
 
-    font-size: 28px;
-    font-weight: 400;
-
-    color: #363944;
     background: transparent;
+}
 
-    text-align: center;
+.back-receipt-button img {
+    width: 28px;
+    height: 28px;
+
+    object-fit: contain;
 }
 
 /* ================================
@@ -379,13 +382,13 @@ button {
     align-items: center;
     justify-content: center;
 
-    border-radius: 50%;
+}
 
-    background: #83E1BE;
-    color: #ffffff;
+.receipt-success-icon img {
+    width: 40px;
+    height: 40px;
 
-    font-size: 32px;
-    font-weight: 600;
+    object-fit: contain;
 }
 
 /* ================================
@@ -409,8 +412,25 @@ button {
 ================================ */
 
 .receipt-data {
+    position: relative;
     width: 100%;
     margin-top: 35px;
+}
+
+/* ================================
+   IMAGEN EXTRA DEL COMPROBANTE
+================================ */
+
+.receipt-extra-image {
+    position: absolute;
+
+    top: 180px;
+    right: 0;
+
+    width: 45px;
+    height: 45px;
+
+    object-fit: contain;
 }
 
 /* ================================
@@ -541,9 +561,18 @@ button {
    BOTÓN COMPARTIR COMPROBANTE
 ================================ */
 
+/* ================================
+   BOTÓN COMPARTIR COMPROBANTE
+================================ */
+
 .share-receipt-button {
     width: 100%;
     height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 
     font-size: 15px;
     font-weight: 600;
@@ -553,8 +582,13 @@ button {
 
     border: 1px solid #f5f6f7;
     border-radius: 10px;
-    
-    
+}
+
+.share-receipt-button img {
+    width: 22px;
+    height: 22px;
+
+    object-fit: contain;
 }
 
 /* ================================
