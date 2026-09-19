@@ -70,7 +70,7 @@ paymentForm.addEventListener("submit", function (event) {
         minute: "2-digit",
         second: "2-digit",
         hour12: false
-    });
+    }).replace(/:/g, "/");
 
     operationNumber = "80" + Math.floor(100000 + Math.random() * 900000);
 
