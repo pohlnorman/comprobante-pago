@@ -315,7 +315,7 @@ button {
 
 .receipt-view {
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
 
     background: #ffffff;
 }
@@ -328,7 +328,7 @@ button {
     position: relative;
 
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
     padding: 20px 33px;
 
     display: flex;
